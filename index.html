@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
@@ -16,15 +19,16 @@
         <div class="logo">Logo</div>
         <div>
           <ul class="navigation">
-            <li>Recent Releases</li>
-            <li>Popular Albums</li>
+            <a href="#Recent-Release"><li class="active">Recent Releases</li></a>
+            <a href="#Popular-album"><li>Popular Albums</li></a>
             <a href="pages/about.html"><li>About Label</li></a>
             <a href="pages/my-playlist.html"><li>My Playlists</li></a>
           </ul>
         </div>
-        <div class="search-bar">
-          <p>Search...</p>
-          <img class="search-image" src="assets/images/search-interface-symbol.png" alt="Search magnify glass">
+        <form class="search-bar">
+          <input type="text" placeholder="Search...">
+         
+        </form>
         </div>
       </nav>
       <div class="album-header">
@@ -37,8 +41,8 @@
           Shuffle
         </div>
         <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M48.3738 23.7436C47.5704 22.941 46.6166 22.3043 45.5667 21.8699C44.5169 21.4355 43.3916 21.2119 42.2552 21.2119C41.1188 21.2119 39.9935 21.4355 38.9436 21.8699C37.8938 22.3043 36.9399 22.941 36.1365 23.7436L34.4692 25.4085L32.802 23.7436C31.1792 22.1231 28.9783 21.2128 26.6833 21.2128C24.3884 21.2128 22.1875 22.1231 20.5647 23.7436C18.9419 25.364 18.0303 27.5618 18.0303 29.8535C18.0303 32.1452 18.9419 34.343 20.5647 35.9635L22.232 37.6284L34.4692 49.8483L46.7065 37.6284L48.3738 35.9635C49.1776 35.1612 49.8151 34.2087 50.2502 33.1604C50.6852 32.112 50.9091 30.9883 50.9091 29.8535C50.9091 28.7187 50.6852 27.595 50.2502 26.5467C49.8151 25.4983 49.1776 24.5458 48.3738 23.7436Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="35" cy="35" r="33" stroke="#66FCF1" stroke-width="4"/>
+            <path d="M48.3738 23.7436C47.5704 22.941 46.6166 22.3043 45.5667 21.8699C44.5169 21.4355 43.3916 21.2119 42.2552 21.2119C41.1188 21.2119 39.9935 21.4355 38.9436 21.8699C37.8938 22.3043 36.9399 22.941 36.1365 23.7436L34.4692 25.4085L32.802 23.7436C31.1792 22.1231 28.9783 21.2128 26.6833 21.2128C24.3884 21.2128 22.1875 22.1231 20.5647 23.7436C18.9419 25.364 18.0303 27.5618 18.0303 29.8535C18.0303 32.1452 18.9419 34.343 20.5647 35.9635L22.232 37.6284L34.4692 49.8483L46.7065 37.6284L48.3738 35.9635C49.1776 35.1612 49.8151 34.2087 50.2502 33.1604C50.6852 32.112 50.9091 30.9883 50.9091 29.8535C50.9091 28.7187 50.6852 27.595 50.2502 26.5467C49.8151 25.4983 49.1776 24.5458 48.3738 23.7436Z" stroke="white" fill="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="35" cy="35" r="33" stroke="#ab20fd" stroke-width="4"/>
         </svg>
       </div>
     </header>
@@ -54,55 +58,153 @@
         </div>
         <div class="switch-artist">
             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="25" cy="25" r="23" stroke="#66FCF1" stroke-width="4"/>
+                <circle cx="25" cy="25" r="23" stroke="#ab20fd" stroke-width="4"/>
                 <path d="M28.4091 35.6059L18.1818 25.3786L28.4091 15.1514" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="25" cy="25" r="23" transform="rotate(-180 25 25)" stroke="#66FCF1" stroke-width="4"/>
+                <circle cx="25" cy="25" r="23" transform="rotate(-180 25 25)" stroke="#ab20fd" stroke-width="4"/>
                 <path d="M21.5909 14.3941L31.8182 24.6214L21.5909 34.8486" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
       </div>
     </section>
     <div class="container">
-      <h3 class="song-catergory-heading" >RECENT RELEASES</h3>
+      <h3 class="song-catergory-heading" id="Recent-Release">RECENT RELEASES</h3>
       <div class="row first">
         <div class="col-3">
-            <div class="song-box first">
+            <div class="song-box cover-1" >
+                <div class="overlay">
                 <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#66FCF1" fill-opacity="0.7"/>
+                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#ab20fd" fill-opacity="0.7"/>
                     <path d="M28 21L49 35L28 49V21Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <div class="song-box-bottom">
-                    <p class="song-box-bottom-artist">Artist</p>
-                    <h3 class="song-box-bottom-album">Album Name</h3>
+                    <p class="song-box-bottom-artist">Skrillex</p>
+                    <h3 class="song-box-bottom-album">Don't get too close</h3>
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M27.6422 13.5678C27.1831 13.1091 26.6381 12.7453 26.0381 12.4971C25.4382 12.2489 24.7952 12.1211 24.1458 12.1211C23.4965 12.1211 22.8534 12.2489 22.2535 12.4971C21.6536 12.7453 21.1085 13.1091 20.6495 13.5678L19.6967 14.5191L18.744 13.5678C17.8167 12.6418 16.559 12.1216 15.2476 12.1216C13.9363 12.1216 12.6786 12.6418 11.7513 13.5678C10.824 14.4937 10.303 15.7496 10.303 17.0592C10.303 18.3687 10.824 19.6246 11.7513 20.5506L12.704 21.5019L19.6967 28.4847L26.6895 21.5019L27.6422 20.5506C28.1015 20.0921 28.4658 19.5478 28.7144 18.9488C28.963 18.3497 29.0909 17.7076 29.0909 17.0592C29.0909 16.4107 28.963 15.7686 28.7144 15.1695C28.4658 14.5705 28.1015 14.0262 27.6422 13.5678Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="20" cy="20" r="19" stroke="#66FCF1" stroke-width="2"/>
+                        <circle cx="20" cy="20" r="19" stroke="#ab20fd" stroke-width="2"/>
                     </svg>
+                </div>
                 </div>
         </div>
         </div>
         <div class="col-3">
-            <div class="song-box">
+            <div class="song-box cover-2";">
+                <div class="overlay">
                 <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#66FCF1" fill-opacity="0.7"/>
+                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#ab20fd" fill-opacity="0.7"/>
                     <path d="M28 21L49 35L28 49V21Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <div class="song-box-bottom">
-                    <p class="song-box-bottom-artist">Artist</p>
-                    <h3 class="song-box-bottom-album">Album Name</h3>
+                    <p class="song-box-bottom-artist">Chainsmokers</p>
+                    <h3 class="song-box-bottom-album">So far so good</h3>
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M27.6422 13.5678C27.1831 13.1091 26.6381 12.7453 26.0381 12.4971C25.4382 12.2489 24.7952 12.1211 24.1458 12.1211C23.4965 12.1211 22.8534 12.2489 22.2535 12.4971C21.6536 12.7453 21.1085 13.1091 20.6495 13.5678L19.6967 14.5191L18.744 13.5678C17.8167 12.6418 16.559 12.1216 15.2476 12.1216C13.9363 12.1216 12.6786 12.6418 11.7513 13.5678C10.824 14.4937 10.303 15.7496 10.303 17.0592C10.303 18.3687 10.824 19.6246 11.7513 20.5506L12.704 21.5019L19.6967 28.4847L26.6895 21.5019L27.6422 20.5506C28.1015 20.0921 28.4658 19.5478 28.7144 18.9488C28.963 18.3497 29.0909 17.7076 29.0909 17.0592C29.0909 16.4107 28.963 15.7686 28.7144 15.1695C28.4658 14.5705 28.1015 14.0262 27.6422 13.5678Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="20" cy="20" r="19" stroke="#66FCF1" stroke-width="2"/>
+                        <circle cx="20" cy="20" r="19" stroke="#ab20fd" stroke-width="2"/>
                     </svg>
+                </div>
                 </div>
         </div>
         </div>
         <div class="col-3">
-            <div class="song-box" style="background-image: url(./assets/images/Awake-album-cover.png);">
+            <div class="song-box cover-3">
+                <div class="overlay">
                 <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#66FCF1" fill-opacity="0.7"/>
+                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#ab20fd" fill-opacity="0.7"/>
+                    <path d="M28 21L49 35L28 49V21Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="song-box-bottom">
+                    <p class="song-box-bottom-artist">Alan Walker</p>
+                    <h3 class="song-box-bottom-album">World Of Walker</h3>
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.6422 13.5678C27.1831 13.1091 26.6381 12.7453 26.0381 12.4971C25.4382 12.2489 24.7952 12.1211 24.1458 12.1211C23.4965 12.1211 22.8534 12.2489 22.2535 12.4971C21.6536 12.7453 21.1085 13.1091 20.6495 13.5678L19.6967 14.5191L18.744 13.5678C17.8167 12.6418 16.559 12.1216 15.2476 12.1216C13.9363 12.1216 12.6786 12.6418 11.7513 13.5678C10.824 14.4937 10.303 15.7496 10.303 17.0592C10.303 18.3687 10.824 19.6246 11.7513 20.5506L12.704 21.5019L19.6967 28.4847L26.6895 21.5019L27.6422 20.5506C28.1015 20.0921 28.4658 19.5478 28.7144 18.9488C28.963 18.3497 29.0909 17.7076 29.0909 17.0592C29.0909 16.4107 28.963 15.7686 28.7144 15.1695C28.4658 14.5705 28.1015 14.0262 27.6422 13.5678Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="20" cy="20" r="19" stroke="#ab20fd" stroke-width="2"/>
+                    </svg>
+                </div>
+                </div>
+        </div>
+        </div>
+        <div class="col-3">
+            <div class="song-box cover-4">
+                <div class="overlay">
+                <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#ab20fd" fill-opacity="0.7"/>
+                    <path d="M28 21L49 35L28 49V21Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="song-box-bottom">
+                    <p class="song-box-bottom-artist">San Holo</p>
+                    <h3 class="song-box-bottom-album">Don't Look Down</h3>
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.6422 13.5678C27.1831 13.1091 26.6381 12.7453 26.0381 12.4971C25.4382 12.2489 24.7952 12.1211 24.1458 12.1211C23.4965 12.1211 22.8534 12.2489 22.2535 12.4971C21.6536 12.7453 21.1085 13.1091 20.6495 13.5678L19.6967 14.5191L18.744 13.5678C17.8167 12.6418 16.559 12.1216 15.2476 12.1216C13.9363 12.1216 12.6786 12.6418 11.7513 13.5678C10.824 14.4937 10.303 15.7496 10.303 17.0592C10.303 18.3687 10.824 19.6246 11.7513 20.5506L12.704 21.5019L19.6967 28.4847L26.6895 21.5019L27.6422 20.5506C28.1015 20.0921 28.4658 19.5478 28.7144 18.9488C28.963 18.3497 29.0909 17.7076 29.0909 17.0592C29.0909 16.4107 28.963 15.7686 28.7144 15.1695C28.4658 14.5705 28.1015 14.0262 27.6422 13.5678Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="20" cy="20" r="19" stroke="#ab20fd" stroke-width="2"/>
+                    </svg>
+                </div>
+                </div>
+        </div>
+        </div>
+    </div>
+    <h3 class="song-category-heading" id="Popular-album">POPULAR ALBUMS</h3>
+    <div class="row">
+        <div class="col-3">
+            <div class="song-box cover-5">
+                <div class="overlay">
+                <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#ab20fd" fill-opacity="0.7"/>
+                    <path d="M28 21L49 35L28 49V21Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="song-box-bottom">
+                    <p class="song-box-bottom-artist">Marshmello</p>
+                    <h3 class="song-box-bottom-album">Shockwave</h3>
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.6422 13.5678C27.1831 13.1091 26.6381 12.7453 26.0381 12.4971C25.4382 12.2489 24.7952 12.1211 24.1458 12.1211C23.4965 12.1211 22.8534 12.2489 22.2535 12.4971C21.6536 12.7453 21.1085 13.1091 20.6495 13.5678L19.6967 14.5191L18.744 13.5678C17.8167 12.6418 16.559 12.1216 15.2476 12.1216C13.9363 12.1216 12.6786 12.6418 11.7513 13.5678C10.824 14.4937 10.303 15.7496 10.303 17.0592C10.303 18.3687 10.824 19.6246 11.7513 20.5506L12.704 21.5019L19.6967 28.4847L26.6895 21.5019L27.6422 20.5506C28.1015 20.0921 28.4658 19.5478 28.7144 18.9488C28.963 18.3497 29.0909 17.7076 29.0909 17.0592C29.0909 16.4107 28.963 15.7686 28.7144 15.1695C28.4658 14.5705 28.1015 14.0262 27.6422 13.5678Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="20" cy="20" r="19" stroke="#ab20fd" stroke-width="2"/>
+                    </svg>
+                </div>
+                </div>
+        </div>
+        </div>
+        <div class="col-3">
+            <div class="song-box cover-6">
+                <div class="overlay">
+                <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#ab20fd" fill-opacity="0.7"/>
+                    <path d="M28 21L49 35L28 49V21Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="song-box-bottom">
+                    <p class="song-box-bottom-artist">Various Artists</p>
+                    <h3 class="song-box-bottom-album">EDM Gaming Music</h3>
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.6422 13.5678C27.1831 13.1091 26.6381 12.7453 26.0381 12.4971C25.4382 12.2489 24.7952 12.1211 24.1458 12.1211C23.4965 12.1211 22.8534 12.2489 22.2535 12.4971C21.6536 12.7453 21.1085 13.1091 20.6495 13.5678L19.6967 14.5191L18.744 13.5678C17.8167 12.6418 16.559 12.1216 15.2476 12.1216C13.9363 12.1216 12.6786 12.6418 11.7513 13.5678C10.824 14.4937 10.303 15.7496 10.303 17.0592C10.303 18.3687 10.824 19.6246 11.7513 20.5506L12.704 21.5019L19.6967 28.4847L26.6895 21.5019L27.6422 20.5506C28.1015 20.0921 28.4658 19.5478 28.7144 18.9488C28.963 18.3497 29.0909 17.7076 29.0909 17.0592C29.0909 16.4107 28.963 15.7686 28.7144 15.1695C28.4658 14.5705 28.1015 14.0262 27.6422 13.5678Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="20" cy="20" r="19" stroke="#ab20fd" stroke-width="2"/>
+                    </svg>
+                </div>
+                </div>
+        </div>
+        </div>
+        <div class="col-3">
+            <div class="song-box cover-7">
+                <div class="overlay">
+                <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#ab20fd" fill-opacity="0.7"/>
+                    <path d="M28 21L49 35L28 49V21Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="song-box-bottom">
+                    <p class="song-box-bottom-artist">Marshmello,Khalid</p>
+                    <h3 class="song-box-bottom-album">Silence</h3>
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.6422 13.5678C27.1831 13.1091 26.6381 12.7453 26.0381 12.4971C25.4382 12.2489 24.7952 12.1211 24.1458 12.1211C23.4965 12.1211 22.8534 12.2489 22.2535 12.4971C21.6536 12.7453 21.1085 13.1091 20.6495 13.5678L19.6967 14.5191L18.744 13.5678C17.8167 12.6418 16.559 12.1216 15.2476 12.1216C13.9363 12.1216 12.6786 12.6418 11.7513 13.5678C10.824 14.4937 10.303 15.7496 10.303 17.0592C10.303 18.3687 10.824 19.6246 11.7513 20.5506L12.704 21.5019L19.6967 28.4847L26.6895 21.5019L27.6422 20.5506C28.1015 20.0921 28.4658 19.5478 28.7144 18.9488C28.963 18.3497 29.0909 17.7076 29.0909 17.0592C29.0909 16.4107 28.963 15.7686 28.7144 15.1695C28.4658 14.5705 28.1015 14.0262 27.6422 13.5678Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="20" cy="20" r="19" stroke="#ab20fd" stroke-width="2"/>
+                    </svg>
+                </div>
+                </div>
+        </div>
+        </div>
+        <div class="col-3">
+            <div class="song-box cover-8">
+                <div class="overlay">
+                <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#ab20fd" fill-opacity="0.7"/>
                     <path d="M28 21L49 35L28 49V21Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <div class="song-box-bottom">
@@ -110,157 +212,86 @@
                     <h3 class="song-box-bottom-album">Awake</h3>
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M27.6422 13.5678C27.1831 13.1091 26.6381 12.7453 26.0381 12.4971C25.4382 12.2489 24.7952 12.1211 24.1458 12.1211C23.4965 12.1211 22.8534 12.2489 22.2535 12.4971C21.6536 12.7453 21.1085 13.1091 20.6495 13.5678L19.6967 14.5191L18.744 13.5678C17.8167 12.6418 16.559 12.1216 15.2476 12.1216C13.9363 12.1216 12.6786 12.6418 11.7513 13.5678C10.824 14.4937 10.303 15.7496 10.303 17.0592C10.303 18.3687 10.824 19.6246 11.7513 20.5506L12.704 21.5019L19.6967 28.4847L26.6895 21.5019L27.6422 20.5506C28.1015 20.0921 28.4658 19.5478 28.7144 18.9488C28.963 18.3497 29.0909 17.7076 29.0909 17.0592C29.0909 16.4107 28.963 15.7686 28.7144 15.1695C28.4658 14.5705 28.1015 14.0262 27.6422 13.5678Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="20" cy="20" r="19" stroke="#66FCF1" stroke-width="2"/>
-                    </svg>
-                </div>
-        </div>
-        </div>
-        <div class="col-3">
-            <div class="song-box">
-                <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#66FCF1" fill-opacity="0.7"/>
-                    <path d="M28 21L49 35L28 49V21Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <div class="song-box-bottom">
-                    <p class="song-box-bottom-artist">Artist</p>
-                    <h3 class="song-box-bottom-album">Album Name</h3>
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M27.6422 13.5678C27.1831 13.1091 26.6381 12.7453 26.0381 12.4971C25.4382 12.2489 24.7952 12.1211 24.1458 12.1211C23.4965 12.1211 22.8534 12.2489 22.2535 12.4971C21.6536 12.7453 21.1085 13.1091 20.6495 13.5678L19.6967 14.5191L18.744 13.5678C17.8167 12.6418 16.559 12.1216 15.2476 12.1216C13.9363 12.1216 12.6786 12.6418 11.7513 13.5678C10.824 14.4937 10.303 15.7496 10.303 17.0592C10.303 18.3687 10.824 19.6246 11.7513 20.5506L12.704 21.5019L19.6967 28.4847L26.6895 21.5019L27.6422 20.5506C28.1015 20.0921 28.4658 19.5478 28.7144 18.9488C28.963 18.3497 29.0909 17.7076 29.0909 17.0592C29.0909 16.4107 28.963 15.7686 28.7144 15.1695C28.4658 14.5705 28.1015 14.0262 27.6422 13.5678Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="20" cy="20" r="19" stroke="#66FCF1" stroke-width="2"/>
+                        <circle cx="20" cy="20" r="19" stroke="#ab20fd" stroke-width="2"/>
                     </svg>
                 </div>
             </div>
         </div>
     </div>
-    <h3 class="song-category-heading">POPULAR ALBUMS</h3>
-    <div class="row">
         <div class="col-3">
-            <div class="song-box">
+            <div class="song-box cover-9">
+                <div class="overlay">
                 <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#66FCF1" fill-opacity="0.7"/>
+                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#ab20fd" fill-opacity="0.7"/>
                     <path d="M28 21L49 35L28 49V21Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <div class="song-box-bottom">
-                    <p class="song-box-bottom-artist">Artist</p>
-                    <h3 class="song-box-bottom-album">Album Name</h3>
+                    <p class="song-box-bottom-artist">MitiS</p>
+                    <h3 class="song-box-bottom-album">TIL THE END</h3>
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M27.6422 13.5678C27.1831 13.1091 26.6381 12.7453 26.0381 12.4971C25.4382 12.2489 24.7952 12.1211 24.1458 12.1211C23.4965 12.1211 22.8534 12.2489 22.2535 12.4971C21.6536 12.7453 21.1085 13.1091 20.6495 13.5678L19.6967 14.5191L18.744 13.5678C17.8167 12.6418 16.559 12.1216 15.2476 12.1216C13.9363 12.1216 12.6786 12.6418 11.7513 13.5678C10.824 14.4937 10.303 15.7496 10.303 17.0592C10.303 18.3687 10.824 19.6246 11.7513 20.5506L12.704 21.5019L19.6967 28.4847L26.6895 21.5019L27.6422 20.5506C28.1015 20.0921 28.4658 19.5478 28.7144 18.9488C28.963 18.3497 29.0909 17.7076 29.0909 17.0592C29.0909 16.4107 28.963 15.7686 28.7144 15.1695C28.4658 14.5705 28.1015 14.0262 27.6422 13.5678Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="20" cy="20" r="19" stroke="#66FCF1" stroke-width="2"/>
+                        <circle cx="20" cy="20" r="19" stroke="#ab20fd" stroke-width="2"/>
                     </svg>
                 </div>
             </div>
         </div>
-        <div class="col-3"><div class="song-box">
-                <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#66FCF1" fill-opacity="0.7"/>
-                    <path d="M28 21L49 35L28 49V21Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <div class="song-box-bottom">
-                    <p class="song-box-bottom-artist">Artist</p>
-                    <h3 class="song-box-bottom-album">Album Name</h3>
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M27.6422 13.5678C27.1831 13.1091 26.6381 12.7453 26.0381 12.4971C25.4382 12.2489 24.7952 12.1211 24.1458 12.1211C23.4965 12.1211 22.8534 12.2489 22.2535 12.4971C21.6536 12.7453 21.1085 13.1091 20.6495 13.5678L19.6967 14.5191L18.744 13.5678C17.8167 12.6418 16.559 12.1216 15.2476 12.1216C13.9363 12.1216 12.6786 12.6418 11.7513 13.5678C10.824 14.4937 10.303 15.7496 10.303 17.0592C10.303 18.3687 10.824 19.6246 11.7513 20.5506L12.704 21.5019L19.6967 28.4847L26.6895 21.5019L27.6422 20.5506C28.1015 20.0921 28.4658 19.5478 28.7144 18.9488C28.963 18.3497 29.0909 17.7076 29.0909 17.0592C29.0909 16.4107 28.963 15.7686 28.7144 15.1695C28.4658 14.5705 28.1015 14.0262 27.6422 13.5678Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="20" cy="20" r="19" stroke="#66FCF1" stroke-width="2"/>
-                    </svg>
-                </div>
-            </div></div>
+        </div>
         <div class="col-3">
-            <div class="song-box">
+            <div class="song-box cover-10">
+                <div class="overlay">
                 <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#66FCF1" fill-opacity="0.7"/>
+                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#ab20fd" fill-opacity="0.7"/>
                     <path d="M28 21L49 35L28 49V21Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <div class="song-box-bottom">
-                    <p class="song-box-bottom-artist">Artist</p>
-                    <h3 class="song-box-bottom-album">Album Name</h3>
+                    <p class="song-box-bottom-artist">Marshmello</p>
+                    <h3 class="song-box-bottom-album">Joytime</h3>
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M27.6422 13.5678C27.1831 13.1091 26.6381 12.7453 26.0381 12.4971C25.4382 12.2489 24.7952 12.1211 24.1458 12.1211C23.4965 12.1211 22.8534 12.2489 22.2535 12.4971C21.6536 12.7453 21.1085 13.1091 20.6495 13.5678L19.6967 14.5191L18.744 13.5678C17.8167 12.6418 16.559 12.1216 15.2476 12.1216C13.9363 12.1216 12.6786 12.6418 11.7513 13.5678C10.824 14.4937 10.303 15.7496 10.303 17.0592C10.303 18.3687 10.824 19.6246 11.7513 20.5506L12.704 21.5019L19.6967 28.4847L26.6895 21.5019L27.6422 20.5506C28.1015 20.0921 28.4658 19.5478 28.7144 18.9488C28.963 18.3497 29.0909 17.7076 29.0909 17.0592C29.0909 16.4107 28.963 15.7686 28.7144 15.1695C28.4658 14.5705 28.1015 14.0262 27.6422 13.5678Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="20" cy="20" r="19" stroke="#66FCF1" stroke-width="2"/>
+                        <circle cx="20" cy="20" r="19" stroke="#ab20fd" stroke-width="2"/>
                     </svg>
                 </div>
             </div>
         </div>
+        </div>
         <div class="col-3">
-            <div class="song-box">
+            <div class="song-box cover-11">
+                <div class="overlay">
                 <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#66FCF1" fill-opacity="0.7"/>
+                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#ab20fd" fill-opacity="0.7"/>
                     <path d="M28 21L49 35L28 49V21Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <div class="song-box-bottom">
-                    <p class="song-box-bottom-artist">Artist</p>
-                    <h3 class="song-box-bottom-album">Album Name</h3>
+                    <p class="song-box-bottom-artist">Alan Walker</p>
+                    <h3 class="song-box-bottom-album">Different World</h3>
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M27.6422 13.5678C27.1831 13.1091 26.6381 12.7453 26.0381 12.4971C25.4382 12.2489 24.7952 12.1211 24.1458 12.1211C23.4965 12.1211 22.8534 12.2489 22.2535 12.4971C21.6536 12.7453 21.1085 13.1091 20.6495 13.5678L19.6967 14.5191L18.744 13.5678C17.8167 12.6418 16.559 12.1216 15.2476 12.1216C13.9363 12.1216 12.6786 12.6418 11.7513 13.5678C10.824 14.4937 10.303 15.7496 10.303 17.0592C10.303 18.3687 10.824 19.6246 11.7513 20.5506L12.704 21.5019L19.6967 28.4847L26.6895 21.5019L27.6422 20.5506C28.1015 20.0921 28.4658 19.5478 28.7144 18.9488C28.963 18.3497 29.0909 17.7076 29.0909 17.0592C29.0909 16.4107 28.963 15.7686 28.7144 15.1695C28.4658 14.5705 28.1015 14.0262 27.6422 13.5678Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="20" cy="20" r="19" stroke="#66FCF1" stroke-width="2"/>
+                        <circle cx="20" cy="20" r="19" stroke="#ab20fd" stroke-width="2"/>
                     </svg>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row first">
+        </div>
         <div class="col-3">
-            <div class="song-box">
+            <div class="song-box cover-12">
+                <div class="overlay">
                 <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#66FCF1" fill-opacity="0.7"/>
+                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#ab20fd" fill-opacity="0.7"/>
                     <path d="M28 21L49 35L28 49V21Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <div class="song-box-bottom">
-                    <p class="song-box-bottom-artist">Artist</p>
-                    <h3 class="song-box-bottom-album">Album Name</h3>
+                    <p class="song-box-bottom-artist">Skrillex</p>
+                    <h3 class="song-box-bottom-album">Quest For Fire</h3>
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M27.6422 13.5678C27.1831 13.1091 26.6381 12.7453 26.0381 12.4971C25.4382 12.2489 24.7952 12.1211 24.1458 12.1211C23.4965 12.1211 22.8534 12.2489 22.2535 12.4971C21.6536 12.7453 21.1085 13.1091 20.6495 13.5678L19.6967 14.5191L18.744 13.5678C17.8167 12.6418 16.559 12.1216 15.2476 12.1216C13.9363 12.1216 12.6786 12.6418 11.7513 13.5678C10.824 14.4937 10.303 15.7496 10.303 17.0592C10.303 18.3687 10.824 19.6246 11.7513 20.5506L12.704 21.5019L19.6967 28.4847L26.6895 21.5019L27.6422 20.5506C28.1015 20.0921 28.4658 19.5478 28.7144 18.9488C28.963 18.3497 29.0909 17.7076 29.0909 17.0592C29.0909 16.4107 28.963 15.7686 28.7144 15.1695C28.4658 14.5705 28.1015 14.0262 27.6422 13.5678Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="20" cy="20" r="19" stroke="#66FCF1" stroke-width="2"/>
+                        <circle cx="20" cy="20" r="19" stroke="#ab20fd" stroke-width="2"/>
                     </svg>
                 </div>
             </div>
         </div>
-        <div class="col-3"><div class="song-box">
-                <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#66FCF1" fill-opacity="0.7"/>
-                    <path d="M28 21L49 35L28 49V21Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <div class="song-box-bottom">
-                    <p class="song-box-bottom-artist">Artist</p>
-                    <h3 class="song-box-bottom-album">Album Name</h3>
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M27.6422 13.5678C27.1831 13.1091 26.6381 12.7453 26.0381 12.4971C25.4382 12.2489 24.7952 12.1211 24.1458 12.1211C23.4965 12.1211 22.8534 12.2489 22.2535 12.4971C21.6536 12.7453 21.1085 13.1091 20.6495 13.5678L19.6967 14.5191L18.744 13.5678C17.8167 12.6418 16.559 12.1216 15.2476 12.1216C13.9363 12.1216 12.6786 12.6418 11.7513 13.5678C10.824 14.4937 10.303 15.7496 10.303 17.0592C10.303 18.3687 10.824 19.6246 11.7513 20.5506L12.704 21.5019L19.6967 28.4847L26.6895 21.5019L27.6422 20.5506C28.1015 20.0921 28.4658 19.5478 28.7144 18.9488C28.963 18.3497 29.0909 17.7076 29.0909 17.0592C29.0909 16.4107 28.963 15.7686 28.7144 15.1695C28.4658 14.5705 28.1015 14.0262 27.6422 13.5678Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="20" cy="20" r="19" stroke="#66FCF1" stroke-width="2"/>
-                    </svg>
-                </div>
-            </div></div>
-        <div class="col-3">
-            <div class="song-box">
-                <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#66FCF1" fill-opacity="0.7"/>
-                    <path d="M28 21L49 35L28 49V21Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <div class="song-box-bottom">
-                    <p class="song-box-bottom-artist">Artist</p>
-                    <h3 class="song-box-bottom-album">Album Name</h3>
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M27.6422 13.5678C27.1831 13.1091 26.6381 12.7453 26.0381 12.4971C25.4382 12.2489 24.7952 12.1211 24.1458 12.1211C23.4965 12.1211 22.8534 12.2489 22.2535 12.4971C21.6536 12.7453 21.1085 13.1091 20.6495 13.5678L19.6967 14.5191L18.744 13.5678C17.8167 12.6418 16.559 12.1216 15.2476 12.1216C13.9363 12.1216 12.6786 12.6418 11.7513 13.5678C10.824 14.4937 10.303 15.7496 10.303 17.0592C10.303 18.3687 10.824 19.6246 11.7513 20.5506L12.704 21.5019L19.6967 28.4847L26.6895 21.5019L27.6422 20.5506C28.1015 20.0921 28.4658 19.5478 28.7144 18.9488C28.963 18.3497 29.0909 17.7076 29.0909 17.0592C29.0909 16.4107 28.963 15.7686 28.7144 15.1695C28.4658 14.5705 28.1015 14.0262 27.6422 13.5678Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="20" cy="20" r="19" stroke="#66FCF1" stroke-width="2"/>
-                    </svg>
-                </div>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="song-box">
-                <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z" fill="#66FCF1" fill-opacity="0.7"/>
-                    <path d="M28 21L49 35L28 49V21Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <div class="song-box-bottom">
-                    <p class="song-box-bottom-artist">Artist</p>
-                    <h3 class="song-box-bottom-album">Album Name</h3>
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M27.6422 13.5678C27.1831 13.1091 26.6381 12.7453 26.0381 12.4971C25.4382 12.2489 24.7952 12.1211 24.1458 12.1211C23.4965 12.1211 22.8534 12.2489 22.2535 12.4971C21.6536 12.7453 21.1085 13.1091 20.6495 13.5678L19.6967 14.5191L18.744 13.5678C17.8167 12.6418 16.559 12.1216 15.2476 12.1216C13.9363 12.1216 12.6786 12.6418 11.7513 13.5678C10.824 14.4937 10.303 15.7496 10.303 17.0592C10.303 18.3687 10.824 19.6246 11.7513 20.5506L12.704 21.5019L19.6967 28.4847L26.6895 21.5019L27.6422 20.5506C28.1015 20.0921 28.4658 19.5478 28.7144 18.9488C28.963 18.3497 29.0909 17.7076 29.0909 17.0592C29.0909 16.4107 28.963 15.7686 28.7144 15.1695C28.4658 14.5705 28.1015 14.0262 27.6422 13.5678Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="20" cy="20" r="19" stroke="#66FCF1" stroke-width="2"/>
-                    </svg>
-                </div>
-            </div>
         </div>
     </div>
+    
     
 </div>
 <footer>
