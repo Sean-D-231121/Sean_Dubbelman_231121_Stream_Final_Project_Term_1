@@ -451,6 +451,9 @@ input::placeholder{
     border-bottom: 2px solid white;
     margin-top: 20px;
 }
+.normal-line:hover{
+    border-bottom-color:#ab20fd ;
+}
 
 .song-heading{
     font-size: 18px;
