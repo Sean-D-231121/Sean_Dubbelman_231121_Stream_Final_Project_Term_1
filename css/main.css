@@ -54,8 +54,9 @@ header{
 }
 .logo{ 
     margin-left: 50px;
-    margin-top: 50px;
+    margin-top: 30px;
     float:left;
+    width: 200px;
 }
 nav div ul{
     list-style: none;
